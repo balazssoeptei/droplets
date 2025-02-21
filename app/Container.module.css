@@ -1,0 +1,6 @@
+.container {
+    width: 1080;
+    height: 720;
+    border: 1px solid black;
+    position: relative;
+}
