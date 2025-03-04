@@ -2,25 +2,23 @@ export enum DropletType {
   Black = "Black",
   Blue = "Blue",
   Green = "Green",
-  Red = "Red"
+  Red = "Red",
 }
 
 type ColorString = string
 
 export function dropletColor(dropletType: DropletType): ColorString {
-  if (dropletType === DropletType.Black) {
-    return "rgba(0, 0, 0, 0.5)"
-  }
-
-  if (dropletType === DropletType.Blue) {
-    return "rgba(0, 0, 250, 0.5)"
-  }
-
-  if (dropletType === DropletType.Green) {
-    return "rgba(0, 250, 0, 0.5)"
-  }
-
-  if (dropletType === DropletType.Red) {
-    return "rgba(250, 0, 0, 0.5)"
+  switch (dropletType) {
+    case DropletType.Black:
+      return "rgba(0, 0, 0, 0.5)"
+    case DropletType.Blue:
+      return "rgba(0, 0, 250, 0.5)"
+    case DropletType.Green:
+      return "rgba(0, 250, 0, 0.5)"
+    case DropletType.Red:
+      return "rgba(250, 0, 0, 0.5)"
+    default:
+      const _exhaustiveCheck: never = dropletType
+      return _exhaustiveCheck
   }
 }
