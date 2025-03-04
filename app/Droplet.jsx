@@ -41,7 +41,8 @@ export const Droplet = ({ id, left, top, type, remove }) => {
 		<div
 			onClick={handleClick}
 			onContextMenu={handleClick}
-			className="droplet" ref={drag}
+			className="droplet"
+			ref={drag}
 			style={{ ...dropletStyle(type), left, top }}
 		>
 		</div>
